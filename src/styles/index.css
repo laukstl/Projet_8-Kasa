@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,118 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #FF6060;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.errorFont {
+  color: #FF6060;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 288px;
+  font-style: normal;
+  font-weight: 700; 
+}
+
+.footerFont {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500; 
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 45px 0px 50px 0px;
+  /* align-items: center; */
+  /* gap: 28px; */
+  width: 100%;
+  background-color: white;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  width: 309px;
+  /* background-color: lightblue; */
+}
+
+header nav a {
+  color: #FF6060;
+  text-decoration: none;
+}
+
+.headerLogo {
+  width: 210px;
+  height: 68px;
+  /* width: 145px;
+  height: 47px; */
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding-top: 66px;
+  padding-bottom: 29px;
+  width: 100%;
+  background-color: black;
+}
+
+.footerLogo {
+  width: 122px;
+  height: 40px;
+  /* if 375 px */
+  /* width: 134px;
+  height: 85px; */
+}
+
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 139px;
+}
+
+.errorPage p {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.errorPage a {
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 139px;
+}
+
+.APropos {
+  margin: 50px; /*NOTE: AU PIF !*/
+}
+
+.aproposBannerPhoto {
+  /* width: 1240px; */
+  width: 100%;
+  height: 223px;
+  border-radius: 25px;
+  object-fit: cover;
+  /* overflow: hidden; */
+}
+
+.collapseContainer {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
