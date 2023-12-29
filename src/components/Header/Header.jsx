@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import logo from "../../assets/svg/logo.svg";
+import "./Header.scss";
 
-function EnTravaux() {
+export function Header() {
   return (
     <header>
       <img className="headerLogo" src={logo} alt="Kasa Logo" />
@@ -13,4 +14,4 @@ function EnTravaux() {
   )
 }
 
-export default EnTravaux
+export default Header;

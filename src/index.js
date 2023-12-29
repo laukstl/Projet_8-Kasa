@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import './styles/index.css';
+import './index.scss';
 import Home from './pages/Home';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 import APropos from './pages/APropos';
 import Logements from './pages/Logements';
 import Header from './components/Header';
@@ -26,4 +26,22 @@ ReactDOM.render(
   document.getElementById('root')
 )
 
-reportWebVitals(console.log);
+// fetch("/logements.json")
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error('Network response was not ok');
+//     }
+//     return response.json(); // Convertis d'abord en texte pour déboguer
+//   })
+//   .then(data => {
+
+//     for ( const k in data ) { console.log(k.id); }
+
+//   })
+//   .catch(error => {
+//     console.error('There has been a problem with your fetch operation:', error);
+//   });
+
+
+
+// reportWebVitals(console.log);
