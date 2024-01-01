@@ -13,7 +13,6 @@ function Gallery () {
                     description={item.description}
                     title={item.title}
                 />
-            
             )}
         </div>
     )

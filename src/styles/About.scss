@@ -1,10 +1,11 @@
-.APropos {
+.About {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1240px;
 
-  .aproposBannerPhotoContainer {
-    width: 1240px;
+  .aboutBannerPhotoContainer {
+    width: 100%;
     height: 223px;
     border-radius: 25px;
     overflow: hidden;
@@ -21,7 +22,7 @@
       z-index: 1;
     }
 
-    .aproposBannerPhoto {
+    .aboutBannerPhoto {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -32,7 +33,7 @@
   .dropdownButtonsContainer {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    // gap: 30px;
     margin: 38px 0px;
   }
 }

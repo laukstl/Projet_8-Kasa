@@ -1,7 +1,7 @@
 import '../styles/Home.scss';
 import Gallery from "../components/Gallery";
 
-function Home() {
+function Accueil() {
   return (
     <div className='homeContainer'>
       <div className="bannerContainer">
@@ -13,4 +13,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Accueil;
