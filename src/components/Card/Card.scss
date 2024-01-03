@@ -1,7 +1,7 @@
 .cardContainer {
     display: flex;
     align-items: self-end;
-    width: 340px;
+    min-width: 340px;
     height: 340px;
     border-radius: 10px;
     border: none;
@@ -10,6 +10,11 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    @media (max-width: 767px) {
+        min-width: 335px;
+        height: 255px;
+    }
 
     &:hover {
         transform: scale(1.05);
@@ -39,6 +44,7 @@
     }
 
     & p {
+        text-align: left;
         z-index: 3;
         color: white;
         font-size: 18px;

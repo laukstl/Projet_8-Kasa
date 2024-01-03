@@ -7,35 +7,59 @@
     // align-items: center;
     max-width: 1240px;
 
-    & .bannerImg {
-        width: 100%;
-        height: 415px;
-        // height: 223px;
-        border-radius: 25px;
-        overflow: hidden;
-        position: relative;
-        object-fit: cover;
+    padding: 0px 10%;
+
+    @media (max-width: 767px) {
+        padding: 0px 10%;
     }
+
+    // & .carrouselContainer {
+        // width: 100%;
+        // height: 115px;
+        // // height: 223px;
+        // border-radius: 25px;
+        // overflow: hidden;
+        // position: relative;
+        // object-fit: cover;
+
+        // @media (max-width: 767px) {
+        //     height: 255px;
+        // }
+    // }
 
     & .blockContainer {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
         margin-top: 30px;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            margin-top: 15px;
+        }
 
         & .leftBlock {
             & .title {
                 font-family: Montserrat;
                 font-weight: 500;
-                font-size: 36px
+                font-size: 36px;
+
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                }
             }
             & .lieu {
                 font-family: Montserrat;
                 font-weight: 500;
-                font-size: 18px
+                font-size: 18px;
+
+                @media (max-width: 767px) {
+                    font-size: 14px;
+                }
             }
             & .tagsContainer {
                 display: flex;
+                flex-wrap: wrap;
                 margin: 20px 0;
                 font-family: Montserrat;
                 font-weight: 500;
@@ -47,7 +71,7 @@
                     justify-content: center;
                     color: white;
                     background-color: #FF6060;
-                    width: 115px;
+                    width: 145px;
                     height: 25px;
                     border-radius: 10px;
                 }
@@ -59,20 +83,41 @@
             flex-direction: column;
             gap: 20px;
 
+            @media (max-width: 767px) {
+                flex-direction: row-reverse;
+                width: 100%;
+                justify-content: space-between;
+            }
+
             & .identity {
                 display: flex;
                 align-items: center;
                 justify-content: flex-right;
                 gap: 20px;
 
+                @media (max-width: 767px) {
+                    gap: 10px;
+                }
+
                 & .hostName {
                     font-family: Montserrat;
                     font-weight: 500;
                     font-size: 18px;
+                    text-align: right;
+
+                    @media (max-width: 767px) {
+                        font-size: 12px;
+                    }
                 }
-                & .hostPhoto {
+                & .hostPicture {
                     width: 64px;
                     height: 64px;
+                    border-radius: 32px;
+
+                    @media (max-width: 767px) {
+                        height: 32px;
+                        width: 32px;
+                    }
                 }
             }
             & .note {
@@ -80,13 +125,27 @@
                 gap: 15px;
                 justify-content: flex-end;
 
+                @media (max-width: 767px) {
+                    gap: 8px;
+                }
+
                 & .etoilePleine {
                     height: 24px;
                     width: 24px;
+
+                    @media (max-width: 767px) {
+                        height: 13px;
+                        width: 13px;
+                    }
                 }
                 & .etoileVide {
                     height: 24px;
                     width: 24px;
+
+                    @media (max-width: 767px) {
+                        height: 13px;
+                        width: 13px;
+                    }
                 }
             }
         }
@@ -95,5 +154,20 @@
     & .dropdownContainer {
         display: flex;
         gap: 30px;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        & .dropdownButton {
+            width: 100%;
+        }
+
+        & ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
     }
 }

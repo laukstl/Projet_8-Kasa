@@ -2,11 +2,11 @@ import "./Card.scss";
 import { useNavigate } from 'react-router-dom';
 
 
-function Card({img, description, title}) {
+function Card({obj, img, description, title}) {
   let navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/Properties'); // Remplace '/Properties' par le chemin de ta route
+    navigate('/Properties', { state : { obj: obj } });
   };
 
   return (

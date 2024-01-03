@@ -4,13 +4,15 @@ import "./Header.scss";
 
 export function Header() {
   return (
-    <header>
-      <img className="headerLogo" src={logo} alt="Kasa Logo" />
-      <nav>
-        <Link to="/">Accueil</Link>
-        <Link to="/About">A Propos</Link>
-      </nav>
-    </header>
+    <div className='headerContainer'>
+        <header>
+          <img className="headerLogo" src={logo} alt="Kasa Logo" />
+          <nav>
+            <Link to="/">Accueil</Link>
+            <Link to="/About">A Propos</Link>
+          </nav>
+        </header>
+    </div>
   )
 }
 

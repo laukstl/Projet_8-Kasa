@@ -9,6 +9,7 @@ function Gallery () {
             {data.map((item) =>
                 <Card 
                     key={item.id}
+                    obj={item}
                     img={item.cover}
                     description={item.description}
                     title={item.title}

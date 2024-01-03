@@ -11,12 +11,12 @@ function DropdownButton ({buttonText, text}) {
     };
 
     return (
-        <div className="dromdownButton">
+        <div className="dropdownButton">
             <button onClick={toggleButtonState} className="button">
                 <div className="buttonText">{buttonText}</div>
                 <img className={buttonState ? "buttonArrow spin" : "buttonArrow spin-reverse"} src={arrow} alt="Flèche de controle" />
             </button>
-            <p className={buttonState ? "text shown" : "text hidden"}>{text}</p>
+            <div className={buttonState ? "text shown" : "text hidden"}>{text}</div>
         </div>
 )
 }

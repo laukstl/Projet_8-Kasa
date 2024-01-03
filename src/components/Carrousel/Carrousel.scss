@@ -1,0 +1,33 @@
+.carrousel {
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+
+    .bannerImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .arrow {
+        width: 47px;
+        height: 80px;
+        position: absolute;
+    }
+
+    .leftArrow {
+        top: 40%;
+        left: 23px;
+    }
+
+    .rightArrow {
+        top: 40%;
+        right: 23px;
+    }
+
+    @media (max-width: 767px) {
+        height: 255px;
+    }
+}
