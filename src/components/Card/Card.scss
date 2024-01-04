@@ -18,8 +18,8 @@
 
     &:hover {
         transform: scale(1.05);
-        cursor: zoom-in;
-        box-shadow: 0 0 20px 5px rgba(255, 96, 96, 0.6);
+        cursor: pointer;
+        // box-shadow: 0 0 20px 5px rgba(255, 96, 96, 0.6);
     }
 
     & img {

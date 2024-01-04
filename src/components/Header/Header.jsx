@@ -9,7 +9,7 @@ export function Header() {
           <img className="headerLogo" src={logo} alt="Kasa Logo" />
           <nav>
             <Link to="/">Accueil</Link>
-            <Link to="/About">A Propos</Link>
+            <Link to="/about">A Propos</Link>
           </nav>
         </header>
     </div>

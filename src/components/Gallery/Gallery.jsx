@@ -1,20 +1,20 @@
 import Card from "../Card"
 import "./Gallery.scss";
+import { Link } from 'react-router-dom';
 
 import data from "../../assets/logements.json";
 
 function Gallery () {
     return (
         <div className="galleryContainer">
-            {data.map((item) =>
-                <Card 
-                    key={item.id}
-                    obj={item}
-                    img={item.cover}
-                    description={item.description}
-                    title={item.title}
-                />
-            )}
+            {data.map((item) => (
+                <Link key={item.id} to={`/logement/${item.id}`}>
+                        <Card 
+                            key={item.id}
+                            obj={item}
+                        />
+                </Link>
+            ))}
         </div>
     )
 }
