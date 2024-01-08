@@ -1,8 +1,21 @@
+.pageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 335px;
+  padding: 0px 20px;
+
+  @media (max-width: 879px) {
+      padding: 0px 20px;
+  }
+}
+
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 1240px;
+  min-width: 335px;
 
   .aboutBannerPhotoContainer {
     width: 100%;
@@ -10,6 +23,11 @@
     border-radius: 25px;
     overflow: hidden;
     position: relative;
+
+    @media (max-width: 879px) {
+      height: 111px;
+      border-radius: 10px;
+    }
 
     &::after {
       content: '';
@@ -33,7 +51,10 @@
   .dropdownButtonsContainer {
     display: flex;
     flex-direction: column;
-    // gap: 30px;
     margin: 38px 0px;
+
+    @media (max-width: 879px) {
+      margin: 19px 0 0 0;
+    }
   }
 }

@@ -1,8 +1,7 @@
 .galleryContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    // display: flex;
-    // flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 50px 60px;
     padding: 56px 50px;
     background-color: #F6F6F6;
@@ -10,11 +9,13 @@
     margin-top: 43px;
     max-width: 1140px;
 
-    @media (max-width: 767px) {
-        background-color: white;
-        margin-top: 0px;
+    @media (max-width: 879px) {
+        display: grid;
         grid-template-columns: 1fr;
-        padding: 22px 0px;
+        background-color: white;
+        width: 100%;
+        margin-top: 0px;
+        padding: 22px 0;
         gap: 22px;
     }
 }

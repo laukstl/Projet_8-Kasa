@@ -2,11 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // padding: 0px 10%;
-
-    @media (max-width: 767px) {
-        // padding: 0px 10%;
-    }
+    min-width: 335px;
+    padding: 0 20px;
 }
 
 .bannerContainer {
@@ -22,10 +19,11 @@
     height: 223px;
     border-radius: 25px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 879px) {
+        justify-content: left;
         height: 111px;
-        // width: 350px;
         border-radius: 10px;
+        background-size: 180%;
     }
 
     &::after {
@@ -39,7 +37,7 @@
         border-radius: 25px;
         z-index: 1;
 
-        @media (max-width: 767px) {
+        @media (max-width: 879px) {
             border-radius: 10px;
         }
     }
@@ -49,10 +47,14 @@
         font-size: 48px;
         font-weight: 500;
         color: white;
+        line-height: 100%;
+        font-family: 'Montserrat', sans-serif;
 
-        @media (max-width: 767px) {
+        @media (max-width: 879px) {
+            width: 217px;
             font-size: 24px;
             font-weight: 400;
+            margin-left: 16px;
         }
     }
 }
