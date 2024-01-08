@@ -5,10 +5,7 @@
     overflow: hidden;
     position: relative;
 
-    // .actualBannerImg {
     .bannerImg {
-    // .actualBannerImg, .previousBannerImg, .nextBannerImg {
-        // display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -16,61 +13,13 @@
         position: absolute;
         top: 0;
         left: 0;
-
-        &.previous {
-            border: 1px red solid;
-            transform: translateX(-100%);
-            &.goLeft {
-                // need to téléport à droite
-            }
-            &.goRight {
-                transform: translateX(0);
-            }
-        }
-        &.actual {
-            border: 1px green solid;
-            &.goLeft {
-                transform: translateX(-100%);
-            }
-            &.goRight {
-                transform: translateX(+100%);
-            }
-        }
-        &.next {
-            border: 1px blue solid;
-            transform: translateX(100%);
-            &.goLeft {
-                transform: translateX(0);
-            }
-            &.goRight {
-                // need to téléport à gauche et changer de nom
-            }
-        }
-
-        // &.goLeft {
-        //     transform: translateX(-100%);
-        //     // transform: translate3d(-100%, 0, 0);
-        // }
-
-        // &.goRight {
-            // transform: translateX(100%);
-            // transform: translate3d(100%, 0, 0);
-        // }
     }
-
-    // .previousBannerImg { transform: translate3d(-100%, 0, 0); }
-    // .previousBannerImg { transform: translateX(-100%); }
-    // .bannerImg { transform: translate3d(0, 0, 0); }
-    // .bannerImg { transform: translateX(0); }
-    // .nextBannerImg { transform: translate3d(100%, 0, 0); }
-    // .nextBannerImg { transform: translateX(100%); }
 
     .arrow {
         width: 47px;
         height: 80px;
         position: absolute;
         cursor: pointer;
-        background: black;
     }
 
     .leftArrow {
