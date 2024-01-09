@@ -1,0 +1,28 @@
+.starRaring {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+
+    @media (max-width: 879px) {
+        gap: 8px;
+    }
+
+    & .fullStar {
+        height: 24px;
+        width: 24px;
+
+        @media (max-width: 879px) {
+            height: 13px;
+            width: 13px;
+        }
+    }
+    & .emptyStar {
+        height: 24px;
+        width: 24px;
+
+        @media (max-width: 879px) {
+            height: 13px;
+            width: 13px;
+        }
+    }
+}

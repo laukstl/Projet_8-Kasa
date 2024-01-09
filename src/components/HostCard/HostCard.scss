@@ -1,0 +1,33 @@
+.hostCard {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 20px;
+
+    @media (max-width: 879px) {
+        gap: 10px;
+    }
+
+    & .hostName {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: right;
+        width: 50%;
+        line-height: 140%;
+
+        @media (max-width: 879px) {
+            font-size: 12px;
+        }
+    }
+    & .hostPicture {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+
+        @media (max-width: 879px) {
+            height: 32px;
+            width: 32px;
+        }
+    }
+}

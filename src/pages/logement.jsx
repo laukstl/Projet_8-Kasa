@@ -1,11 +1,14 @@
 import '../styles/logement.scss';
+import dataFile from "../assets/logements.json";
+import { useParams } from 'react-router-dom';
+
+// Components
 import DropdownButton from "../components/DropdownButton";
 import Carrousel from "../components/Carrousel";
-import starIcon from "../assets/svg/star.svg";
-import starIconEmpty from "../assets/svg/star-inactive.svg";
-import { useParams } from 'react-router-dom';
-import dataFile from "../assets/logements.json";
+import Tags from "../components/Tags";
 import Error from '../components/Error';
+import StarRating from '../components/StarRating';
+import HostCard from '../components/HostCard';
 
 function Logement () {
 
@@ -29,22 +32,16 @@ function Logement () {
                         <div className='lieu'>{data.location}</div>
                         <div className='tagsContainer'>
                             {data.tags.map((item)=>
-                                <div key={item}>{item}</div>
+                                <Tags tagText={item} />
                             )}
                         </div>
                     </div>
                     <div className='rightBlock'>
-                        <div className='identity'>
-                            <div className='hostName'>{data.host.name}</div>
-                            <img src={data.host.picture} className='hostPicture' alt="Hôte du bien" />
+                        <div className='hostCardContainer'>
+                            <HostCard hostName={data.host.name} hostPicture={data.host.picture} />
                         </div>
-                        <div className='note'>
-                            {Array.from({ length: data.rating }).map((_, index) => (
-                                <img key={index} src={starIcon} className='etoilePleine' alt="star" />
-                            ))}
-                            {Array.from({ length: 5 - data.rating }).map((_, index) => (
-                                <img key={index + data.rating} src={starIconEmpty} className='etoileVide' alt="star" />
-                            ))}
+                        <div className='starRatingContainer'>
+                            <StarRating rating={data.rating} />
                         </div>
                     </div>
                 </div>
