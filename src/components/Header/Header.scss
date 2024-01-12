@@ -30,6 +30,7 @@ header {
     }
 
     & nav {
+        justify-content: right;
         display: flex;
         align-items: center;
         gap: 57px;
@@ -38,7 +39,7 @@ header {
             gap: 26px;
         }
 
-        & a {
+        & .links {
             color: #FF6060;
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
@@ -50,7 +51,7 @@ header {
                 text-transform: uppercase;
             }
 
-            &:hover {
+            &.active {
                 text-decoration: underline;
             }
         }
