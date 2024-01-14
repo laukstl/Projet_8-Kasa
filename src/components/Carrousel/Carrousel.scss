@@ -10,30 +10,46 @@
         border-radius: 10px;
     }
 
-    .bannerImg {
+    & .bannerImg {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 1.5s ease-in-out;
         position: absolute;
         top: 0;
         left: 0;
+        opacity: 0.5;
+        filter: blur(0);
+        transition: opacity 0.25s ease-in-out, filter 0.25s ease-in-out;
+
+        &.blur {
+            filter: blur(100px);
+        }
+
+        &.noBlur {
+            filter: blur(0);
+        }
+
+        &.visible {
+            opacity: 1;
+        }
     }
 
-    .arrow {
+    & .arrow {
         width: 47px;
         height: 80px;
         position: absolute;
         cursor: pointer;
         top: 50%;
         transform: translateY(-50%);
+        filter: drop-shadow(3px 3px 3px rgba(0 0 0 / 0.2));
+        z-index: 10;
 
         @media (max-width: 879px) {
             height: 20px;
         }
     }
 
-    .leftArrow {
+    & .leftArrow {
         left: 23px;
 
         @media (max-width: 879px) {
@@ -41,11 +57,31 @@
         }
     }
 
-    .rightArrow {
+    & .rightArrow {
         right: 23px;
 
         @media (max-width: 879px) {
             right: -10px;
         }
+    }
+
+    & .counter {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: white;
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        @media (max-width: 879px) {
+            display: none;
+        }
+    }
+
+    & .hide {
+        display: none;
     }
 }
