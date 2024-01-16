@@ -1,11 +1,13 @@
 import '../styles/logement.scss';
-import dataFile from "../assets/logements.json";
+
+import dataFile from '../assets/logements.json';
+
 import { useParams } from 'react-router-dom';
 
 // Components
-import DropdownButton from "../components/DropdownButton";
-import Carrousel from "../components/Carrousel";
-import Tags from "../components/Tags";
+import DropdownButton from '../components/DropdownButton';
+import Carrousel from '../components/Carrousel';
+import Tags from '../components/Tags';
 import Error from '../components/Error';
 import StarRating from '../components/StarRating';
 import HostCard from '../components/HostCard';
@@ -22,14 +24,14 @@ function Logement () {
 
     return (
         <div className='pageContainer'>
-            <div className='propertiesContainer'>
+            <div className='logementContainer'>
                 <div className='carrouselContainer'>
                     <Carrousel pictures={data.pictures} title={data.title} />
                 </div>
                 <div className='blockContainer'>
                     <div className='leftBlock'>
                         <div className='title'>{data.title}</div>
-                        <div className='lieu'>{data.location}</div>
+                        <div className='location'>{data.location}</div>
                         <div className='tagsContainer'>
                             {data.tags.map((item, index)=>
                                 <Tags key={index} tagText={item} />

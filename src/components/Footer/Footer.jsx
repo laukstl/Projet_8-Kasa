@@ -1,5 +1,6 @@
-import logo from "../../assets/svg/logo_white.svg";
 import "./Footer.scss";
+
+import logo from "../../assets/svg/logo_white.svg";
 
 function EnTravaux() {
     return (

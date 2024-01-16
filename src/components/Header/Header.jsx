@@ -1,8 +1,10 @@
 import "./Header.scss";
+
 import logo from "../../assets/svg/logo.svg";
+
 import { NavLink } from 'react-router-dom';
 
-export function Header() {
+function Header() {
     const links = [
         {
             txt: "Accueil",

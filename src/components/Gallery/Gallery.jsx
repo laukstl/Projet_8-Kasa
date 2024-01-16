@@ -1,8 +1,9 @@
-import Card from "../Card"
 import "./Gallery.scss";
-import { Link } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
 import data from "../../assets/logements.json";
+
+import Card from "../Card"
 
 function Gallery () {
     return (

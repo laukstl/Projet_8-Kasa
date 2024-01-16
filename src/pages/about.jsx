@@ -1,6 +1,8 @@
-import bannerPhoto from "../assets/photos/photo-glacier.jpg";
-import DropdownButton from "../components/DropdownButton";
 import '../styles/about.scss';
+
+// Components
+import bannerPhoto from '../assets/photos/photo-glacier.jpg';
+import DropdownButton from '../components/DropdownButton';
 
 const fiability = "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.";
 const respect = "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.";
@@ -10,9 +12,9 @@ const security = "La sécurité est la priorité de Kasa. Aussi bien pour nos h�
 function About() {
     return (
         <div className="pageContainer">
-            <div className="about">
-                <div className="aboutBannerPhotoContainer">
-                    <img src={bannerPhoto} className="aboutBannerPhoto" alt="Un glacier fondu dans un paysage montagneux grandiose" />
+            <div className='about'>
+                <div className='aboutBannerPhotoContainer'>
+                    <img src={bannerPhoto} className='aboutBannerPhoto' alt="Un glacier fondu dans un paysage montagneux grandiose" />
                 </div>
                 <div className="dropdownButtonsContainer">
                     <DropdownButton buttonText="Fiabilité" text={fiability} />

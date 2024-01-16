@@ -4,15 +4,23 @@ import rightArrow from "../../assets/svg/rightArrow.svg";
 import { useState } from 'react';
 
 function Carrousel({ pictures, title }) {
+
+    // nombre total d'images du carrousel
     const numbersOfPictures = pictures.length;
+
+    // état local de l'image actuelle affichée
     const [index, setIndex] = useState(0);
+
+    // état local de visibilité de l'image ( pendant l'animation )
     const [visible, setVisibility] = useState(true);
 
-    const handleLeftArrowClick = (event) => {
+    const handleLeftArrowClick = () => {
         setVisibility(false);
 
         setTimeout(() => {
             setIndex((prevIndex) => {
+                // gestion de boucle: méthode 1 ( avec un if )
+                // gestion de la boucle si l'index atteint la première image
                 if (prevIndex === 0) {
                     return numbersOfPictures - 1;
                 }
@@ -26,13 +34,15 @@ function Carrousel({ pictures, title }) {
         setVisibility(false);
 
         setTimeout(() => {
+            // gestion de boucle: méthode 2 ( avec un remainder )
             setIndex((prevIndex) => (prevIndex + 1) % numbersOfPictures);
             setVisibility(true);
         }, 250);
     };
 
+    // cache les widgets si il n'y a qu'une seule image
     const checkPicturesCount = () => {
-        return numbersOfPictures < 2 ? 'hide' : ''
+        return numbersOfPictures <= 1 ? 'hide' : ''
     }
 
     return (
