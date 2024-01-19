@@ -7,6 +7,7 @@ function StarRating ({rating}) {
     return (
         <div className="starRating">
             {/* Affichage des étoiles 'remplies' */}
+            {/* créé une tab vide de x rating pour compter... for (let i = 0; i < rating; i++) { */}
             {Array.from({ length: rating }).map((_, index) => (
                 <img key={index} src={starIcon} className='stars' alt="star" />
             ))}
